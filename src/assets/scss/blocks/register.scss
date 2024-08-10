@@ -1,0 +1,69 @@
+.register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 6rem;
+
+  @include breakpoint($mobile_bp) {
+    overflow: hidden;
+  }
+}
+
+.register-title {
+  font-size: 3.6rem;
+  font-weight: 500;
+
+  @include breakpoint($mobile_bp) {
+    font-size: 2.8rem;
+  }
+}
+
+.register-text {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #925fa4;
+  margin-bottom: 2rem;
+
+  @include breakpoint($mobile_bp) {
+    padding: 0 6rem;
+    text-align: center;
+  }
+}
+
+.register-subtext {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #925fa4;
+  padding-right: 22rem;
+  margin: 1rem 0;
+}
+
+.register-gender {
+  padding: .5rem 6rem;
+  margin: 1rem 0;
+
+  &--man {
+    background: linear-gradient(to right, #1959d1, #00008b);
+    border-radius: 500px;
+    margin-right: 0.2rem;
+  }
+
+  &--woman {
+    background: #2a1332;
+    border-radius: 500px;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: "";
+      background: $grad;
+      top: -1px;
+      bottom: -1px;
+      left: -1px;
+      right: -1px;
+      z-index: -1;
+      border-radius: 500px;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@import "vendor/reset.scss";
+@import "_vars.scss";
+@import "mixin.scss";
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #2a1332;
+  font-size: 1.4rem;
+  color: white;
+  font-family: "Rubik", sans-serif;
+  line-height: 1.5;
+
+  &.no-scroll {
+    overflow-y: hidden;
+    background-color: darken(#2a1332, 3)
+  }
+}
+
+
+@import "blocks/container.scss";
+@import "blocks/main.scss";
+@import "blocks/header.scss";
+@import "blocks/nav.scss";
+@import "blocks/page.scss";
+@import "blocks/forms.scss";
+@import "blocks/footer.scss";
+@import "blocks/subscription.scss";
+@import "blocks/select.scss";
+@import "blocks/profile.scss";
+@import "blocks/input.scss";
+@import "blocks/favourites.scss";
+@import "blocks/bank-account.scss";
+@import "blocks/login.scss";
+@import "blocks/register.scss";
+@import "blocks/modal.scss";
+@import "blocks/slider.scss";

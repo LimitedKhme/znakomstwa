@@ -1,0 +1,229 @@
+.profile {
+  display: flex;
+  margin-bottom: 2.5rem;
+  overflow: hidden;
+
+  @include breakpoint($laptop_bp) {
+    overflow: hidden;
+  }
+
+  @include breakpoint($tablet_bp) {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+}
+
+.profile-photo {
+  width: 28rem;
+  height: 36rem;
+  border-radius: 50px;
+  margin-bottom: 0.8rem;
+}
+
+.profile-photos-another {
+  display: flex;
+  justify-content: space-between;
+}
+
+.another-item {
+  padding: 2.9rem;
+  border: 1px solid $primary;
+  border-radius: 30px;
+}
+
+.profile-nav {
+  width: 24rem;
+  height: $profile-nav-height;
+  background-color: $secondary;
+  border-radius: 30px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  margin-right: 2rem;
+
+  @include breakpoint($mobile_bp) {
+    display: none;
+  }
+}
+
+.profile-nav-list {
+  display: flex;
+  flex-direction: column;
+  padding: 2.6rem;
+  justify-content: space-between;
+
+  @include breakpoint($laptop_bp) {
+    padding: 3rem 1.1rem;
+  }
+}
+
+.profile-nav-item {
+  position: relative;
+  margin-bottom: 1.3rem;
+
+  &:last-child {
+    margin-bottom: 0;
+    margin-top: 2rem;
+  }
+
+  &.active {
+    &:before {
+      content: " ";
+      display: block;
+      width: 0.2rem;
+      height: 2.4rem;
+      background: linear-gradient(to right, #ee0979, #ff6a00);
+      position: absolute;
+      top: 0;
+      left: -13%;
+      z-index: 1;
+
+      @include breakpoint($laptop_bp) {
+        left: -9%;
+      }
+
+      @include breakpoint($tablet_bp) {
+        left: -5%;
+      }
+    }
+  }
+}
+
+.profile-nav-link {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: $white;
+  text-decoration: none;
+  margin-left: 1rem;
+  transition: all 0.2s linear;
+
+  &:hover {
+    color: $orange;
+  }
+
+  @include breakpoint($laptop_bp) {
+    font-size: 1.3rem;
+  }
+}
+
+.profile-nav-icon {
+  @include breakpoint($laptop_bp) {
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+}
+
+.questionnaire-subtitle {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: $white;
+  margin-bottom: 1.5rem;
+}
+
+.block-name {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: $white;
+
+  @include breakpoint($mobile_bp) {
+    padding-left: 2rem;
+    font-size: 1.2rem;
+    color: #6E447B;
+  }
+}
+
+.profile-questionnaire {
+  width: 100%;
+  max-width: 63rem;
+  padding-left: 2rem;
+
+  @include breakpoint($mobile_bp) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.questionnaire-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  &--up {
+    align-items: start;
+  }
+
+  &--right {
+    justify-content: flex-end;
+    margin-top: 3rem;
+  }
+
+  @include breakpoint($mobile_bp) {
+    flex-direction: column;
+    align-items: start;
+    gap: .2rem;
+  }
+}
+
+.block-inputs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.questionnaire-gender {
+  padding: 1.4rem 6.7rem;
+  margin-right: 0.1rem;
+
+  &--man {
+    background: linear-gradient(to right, #1959d1, #00008b);
+    border-radius: 500px;
+    margin-right: 0.2rem;
+  }
+
+  &--woman {
+    background: #2a1332;
+    border-radius: 500px;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: "";
+      background: $grad;
+      top: -2px;
+      bottom: -1px;
+      left: -1px;
+      right: -1px;
+      z-index: -1;
+      border-radius: 500px;
+    }
+  }
+
+  @include breakpoint($mobile_bp) {
+    padding: 1rem 5.6rem;
+  }
+}
+
+.profile-about {
+  flex-grow: 1;
+  width: 35rem;
+  height: 18rem;
+  border: none;
+  border-radius: 30px;
+  padding: 2rem 3rem;
+  background-color: #42204e;
+  resize: none;
+  font-family: inherit;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #8b5d9a;
+
+  &::placeholder {
+    color: #8b5d9a;
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+
+  @include breakpoint($mobile_bp) {
+    width: 30rem;
+  }
+}

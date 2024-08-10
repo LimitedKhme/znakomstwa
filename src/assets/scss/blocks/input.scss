@@ -1,0 +1,90 @@
+.form-input {
+  background-color: #42204e;
+  border-radius: 500px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  position: relative;
+
+  &--orig {
+    width: 35rem;
+    height: 4.7rem;
+
+    @include breakpoint($mobile_bp) {
+      width: 30rem;
+    }
+  }
+
+  &--middle {
+    width: 16rem;
+
+    @include breakpoint($mobile_bp) {
+      width: 14rem;
+    }
+  }
+
+  &--middle-reg {
+    width: 15rem;
+    height: 5rem;
+  }
+
+  &--mini {
+    width: 9rem;
+
+    @include breakpoint($mobile_bp) {
+      width: 7.5rem;
+    }
+  }
+
+  &--mini-reg {
+    width: 8rem;
+    height: 5rem;
+  }
+
+  &--reg {
+    width: 32rem;
+    height: 5rem;
+  }
+}
+
+.input-img {
+  position: absolute;
+  top: 30%;
+  right: 5%;
+}
+
+.profile-input {
+  display: block;
+  text-align: left;
+  align-items: center;
+  background: transparent;
+  border: none;
+
+  font-family: inherit;
+  font-size: 1.4rem;
+  font-weight: 400;
+
+  color: #8b5d9a;
+
+  padding: 1.6rem 2rem;
+
+  &::placeholder {
+    color: #8b5d9a;
+  }
+}
+
+.login-input {
+  width: 32rem;
+  height: 5rem;
+  background-color: #42204e;
+  border-radius: 500px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 0 6rem;
+  border: none;
+  font-size: 1.4rem;
+  font-weight: 400;
+
+  color: #8b5d9a;
+
+  &::placeholder {
+    color: #8b5d9a;
+  }
+}

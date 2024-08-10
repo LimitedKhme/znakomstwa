@@ -1,0 +1,270 @@
+/*
+.wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.slider-container {
+  overflow: hidden;
+  border-color: pink;
+}
+
+.slider-track {
+  display: flex;
+  transition: 0.2s;
+}
+
+.slider-item {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  gap: 5rem;
+
+  @include breakpoint($laptop_bp) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include breakpoint($mobile_bp) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.prev {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50px;
+  position: absolute;
+  top: 45%;
+  left: -5%;
+  border: none;
+  background: #2a1332;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    right: -0.7px;
+    background: $grad;
+    border-radius: 50px;
+    z-index: -1;
+  }
+
+  @include breakpoint($laptop_bp) {
+    left: 10%;
+  }
+}
+
+.next {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50px;
+  position: absolute;
+  top: 45%;
+  right: -5%;
+  border: none;
+  background: none;
+
+  background: #2a1332;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    right: -0.7px;
+    background: $grad;
+    border-radius: 50px;
+    z-index: -1;
+  }
+
+  @include breakpoint($laptop_bp) {
+    right: 10%;
+  }
+}
+
+*/
+
+.slider-photos {
+  width: 38rem;
+  position: relative;
+
+  @include breakpoint($mobile_bp) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.slider-photo {
+  width: 38rem;
+  height: 49rem;
+  border-radius: 50px;
+  margin-bottom: 0.8rem;
+  object-fit: cover;
+
+  @include breakpoint($mobile_bp) {
+    width: 35rem;
+  }
+}
+
+.like {
+  position: absolute;
+  background: $grad;
+  padding: 2rem;
+  border-radius: 50px;
+  top: 70%;
+  left: 42%;
+  box-shadow: 0 8px 8px rgba(238, 9, 121, 0.4);
+}
+
+.slider-photos-another {
+  display: flex;
+  justify-content: space-between;
+
+  @include breakpoint($mobile_bp) {
+    width: 35rem;
+  }
+}
+
+.slider-another {
+  border-radius: 20px;
+
+  @include breakpoint($mobile_bp) {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+.parameters {
+  margin: 4rem 0 3rem 0;
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint($mobile_bp) {
+    display: none;
+  }
+}
+
+.parametr-item {
+  display: inline;
+  margin-right: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+
+  &--ml {
+    margin-right: 0;
+    margin-left: 1.5rem;
+  }
+
+  &--big {
+    font-size: 1.8rem;
+    font-weight: 550;
+  }
+
+  &--ml3r {
+    margin-right: 0;
+    margin-left: 3rem;
+  }
+
+  @include breakpoint($tablet_bp) {
+    font-size: 1.2rem;
+  }
+}
+
+.parametr {
+  margin-bottom: 1rem;
+
+  &--mb2r {
+    margin-bottom: 2rem;
+  }
+}
+
+.about-me-title {
+  font-size: 1.9rem;
+  font-weight: 550;
+}
+
+.about-me-text {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.about-me-date {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #8b5d9a;
+}
+
+.slider-info {
+  @include breakpoint($mobile_bp) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.swiper {
+  max-width: 100%;
+  height: 70rem;
+
+  @include breakpoint($laptop_bp) {
+    max-width: 80rem;
+    height: 100%;
+  }
+
+  @include breakpoint($tablet_bp) {
+    height: 100%;
+  }
+
+  @include breakpoint($mobile_bp) {
+    max-width: 100%;
+    height: 100%;
+  }
+}
+
+.swiper .swiper-wrapper .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  background-color: $secondary;
+
+  @include breakpoint($laptop_bp) {
+    flex-direction: column;
+    padding: 2rem 0;
+  }
+
+  @include breakpoint($tablet_bp) {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  background-color: black;
+  gap: 2rem;
+}
+
+.slider {
+  overflow: hidden;
+}
+
+.line {
+  width: 0;
+}

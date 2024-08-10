@@ -1,0 +1,25 @@
+.favourites {
+  display: flex;
+  margin-bottom: 11rem;
+
+  @include breakpoint($tablet_bp) {
+    overflow: auto;
+    flex-direction: column;
+  }
+
+  @include breakpoint($mobile_bp) {
+    overflow: auto;
+    flex-direction: column;
+  }
+}
+
+.fav-inner {
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint($mobile_bp) {
+    margin-top: 2rem;
+  }
+}
+
+
