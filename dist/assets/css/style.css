@@ -2624,7 +2624,7 @@ li {
 
 @media (max-width: 575px) {
     .parameters {
-        width: 30rem;
+        display: none;
     }
 }
 
